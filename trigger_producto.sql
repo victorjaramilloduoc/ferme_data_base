@@ -1,0 +1,27 @@
+--------------------------------------------------------
+--  DDL for Trigger PRODUCTO
+--------------------------------------------------------
+
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "PORTAFOLIO"."PRODUCTO_T1" 
+BEFORE INSERT OR UPDATE ON PRODUCTO
+FOR EACH ROW 
+DECLARE
+	ID_FAMILIA NUMBER ;
+BEGIN
+	SELECT sp.ID_FAMILIA_PRODUCTO INTO ID_FAMILIA FROM SUBFAMILIA_PRODUCTO sp 
+	WHERE ID_SUBFAMILIA_PRODUCTO = :NEW.ID_SUBFAMILIA_PRODUCTO;
+	:NEW.CODIGO_PRODUCTO := TO_NUMBER(LPAD(:NEW.ID_PROVEEDOR, 3, '0') 
+		|| LPAD((ID_FAMILIA), 3, '0') 
+		|| CASE 
+			WHEN :NEW.FECHA_VENCIMIENTO IS NULL
+				THEN '00000000'
+			ELSE TO_CHAR(:NEW.FECHA_VENCIMIENTO, 'YYYYMMDD')
+			END 
+		|| LPAD(:NEW.ID_PRODUCTO, 3, '0'));
+END;
+/
+ALTER TRIGGER "PORTAFOLIO"."PRODUCTO_T1" ENABLE;
+
+--------------------------------------------------------
+--  DDL for Trigger PRODUCTO
+--------------------------------------------------------
