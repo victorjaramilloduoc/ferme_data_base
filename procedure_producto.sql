@@ -28,7 +28,7 @@ END;
 --  DDL for PROCEDURE PRODUCTO
 --------------------------------------------------------
 
-CREATE OR REPLACE PROCEDURE INSERT_PRODUCTO
+CREATE OR REPLACE PROCEDURE INSERT_PRODUCT
 (NOMBRE_P       IN PRODUCTO.NOMBRE%TYPE                                     DEFAULT NULL,
  DESC_P         IN PRODUCTO.DESCRIPCION%TYPE                             DEFAULT 'desconocido',
  PRECIO_P       IN PRODUCTO.PRECIO%TYPE                                     DEFAULT NULL,
