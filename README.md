@@ -24,9 +24,9 @@ que consiste en la logica de creacion de codigo del producto
 procedure_producto.sql
 ```bash 
 contiene scrips de creacion deprocedimiento de producto
-que inserta los parametros recibidos  el nombre del procedimiento es 'INSERT_PRODUCTO'
+que inserta los parametros recibidos  el nombre del procedimiento es 'INSERT_PRODUCT'
 ```
-## Uso de 'INSERT_PRODUCTO'
+## Uso de 'INSERT_PRODUCT'
 
 
 
