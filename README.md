@@ -1,39 +1,39 @@
 # Base de datos ferme
 
-Base de Datos Ferme limpia sin datos 
+- Script Base de datos
 
-Procedimiento 
+- Script poblamiento Base de datos
 
-Trigger
+- Procedimiento Almacenado
 
-## instalacion 
+- Trigger
 
-Contenido de los scrips 
+## Instalación 
 
-Scrip_DB.sql 
+### **Contenido de los scripts**
+
+*script_base_datos.sql*
 ```bash 
-contiene la estructura de la base de datos completa
+Contiene la estructura de la base de datos completa
 ```
 
-trigger_producto.sql
+*trigger_producto.sql*
 ```bash 
-contiene scrips de creacion de trigger de producto
-que consiste en la logica de creacion de codigo del producto 
+Contiene scrips de creacion de trigger de producto que consiste en la lógica de creación de codigo del producto.
 ```
 
-procedure_producto.sql
+*procedure_producto.sql*
 ```bash 
-contiene scrips de creacion deprocedimiento de producto
-que inserta los parametros recibidos  el nombre del procedimiento es 'INSERT_PRODUCT'
+Contiene scrips de creacion deprocedimiento de producto que inserta los parametros recibidos.
+El nombre del procedimiento es 'INSERT_PRODUCT'
 ```
-## Uso de 'INSERT_PRODUCT'
-
-
+### **Uso de 'INSERT_PRODUCT'**
 
 ```sql
 execute insert_product(NOMBRE, DESCRIPCION, PRECIO, STOCK, ID_PROVEEDOR, ID_SUBFAMILIA_PRODUCTO, MARCA_PRODUCTO, HABILITADO,FECHA_VENCIMIENTO)
 ```
-donde se debe remplazar todo lo que esta dentro del parentesis por los datos a insertar segun corresponda
+
+Donde se debe remplazar todo lo que esta dentro del parentesis por los datos a insertar según corresponda
 
 
 
