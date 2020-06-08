@@ -14,7 +14,12 @@
 
 *script_base_datos.sql*
 ```bash 
-Contiene la estructura de la base de datos completa
+Contiene la estructura de la base de datos completa, junto a las secuencias implementadas.
+```
+
+*script_base_datos.sql*
+```bash 
+Contiene los datos para realizar el poblamiento de la base de datos.
 ```
 
 *trigger_producto.sql*
